@@ -24,3 +24,8 @@ override.tf.json
 # Ignore lock file
 .terraform.lock.hcl
 
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
