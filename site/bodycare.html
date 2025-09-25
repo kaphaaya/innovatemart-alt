@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bodycare - Innovate Mart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="assets/images/logo.png" alt="Innovate Mart Logo" class="h-12">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="index.html" class="hover:text-[#1E3A8A]">Home</a>
+        <a href="bodycare.html" class="hover:text-[#1E3A8A]">Bodycare</a>
+        <a href="electronics.html" class="hover:text-[#1E3A8A]">Electronics</a>
+        <a href="fashion.html" class="text-[#1E3A8A]">Fashion</a>
+        <a href="kitchen.html" class="hover:text-[#1E3A8A]">Kitchen</a>
+      </nav>
+
+      <!-- Cart + Mobile Hamburger -->
+      <div class="flex items-center space-x-4">
+        <button class="relative text-gray-700 hover:text-[#1E3A8A]">
+          <i class="fas fa-shopping-cart text-2xl"></i>
+          <span class="absolute -top-2 -right-2 bg-[#F97316] text-white text-xs px-1 rounded-full">0</span>
+        </button>
+        <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow">
+      <nav class="flex flex-col space-y-2 p-4">
+        <a href="index.html" class="hover:text-[#1E3A8A]">Home</a>
+        <a href="bodycare.html" class="hover:text-[#1E3A8A]">Bodycare</a>
+        <a href="electronics.html" class="hover:text-[#1E3A8A]">Electronics</a>
+        <a href="fashion.html" class="text-[#1E3A8A] font-bold">Fashion</a>
+        <a href="kitchen.html" class="hover:text-[#1E3A8A]">Kitchen</a>
+      </nav>
+    </div>
+  </header>
+
+   <!-- Banner -->
+<section class="relative bg-cover bg-center h-[350px]" 
+         style="background-image: url('assets/images/banners/bodycarebanner.png');">
+  <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+    <h1 class="text-white text-3xl md:text-5xl font-bold">BodyCare</h1>
+  </div>
+</section>
+
+    <!-- Product Grid -->
+    <section class="py-12 px-4 container mx-auto">
+      <h2 class="text-2xl font-bold mb-6">Our Bodycare Collection</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+
+        <!-- Bodywash -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition">
+          <img src="assets/images/bodycare/bodywash.jpeg" alt="Bodywash" class="h-40 w-full object-cover cursor-pointer product-img">
+          <div class="p-4 flex flex-col flex-grow">
+            <h3 class="text-md font-bold text-gray-800">Bodywash</h3>
+            <p class="text-lg font-semibold text-primary mt-2">₦15,000</p>
+            <button class="mt-4 w-full bg-accent text-white py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Deodorant -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition">
+          <img src="assets/images/bodycare/deodorant.jpeg" alt="Deodorant" class="h-40 w-full object-cover cursor-pointer product-img">
+          <div class="p-4 flex flex-col flex-grow">
+            <h3 class="text-md font-bold text-gray-800">Deodorant</h3>
+            <p class="text-lg font-semibold text-primary mt-2">₦12,000</p>
+            <button class="mt-4 w-full bg-accent text-white py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Dry Brush -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition">
+          <img src="assets/images/bodycare/drybrush.jpeg" alt="Dry Brush" class="h-40 w-full object-cover cursor-pointer product-img">
+          <div class="p-4 flex flex-col flex-grow">
+            <h3 class="text-md font-bold text-gray-800">Dry Brush</h3>
+            <p class="text-lg font-semibold text-primary mt-2">₦10,000</p>
+            <button class="mt-4 w-full bg-accent text-white py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Makeup -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition">
+          <img src="assets/images/bodycare/makeup.jpeg" alt="Makeup" class="h-40 w-full object-cover cursor-pointer product-img">
+          <div class="p-4 flex flex-col flex-grow">
+            <h3 class="text-md font-bold text-gray-800">Makeup</h3>
+            <p class="text-lg font-semibold text-primary mt-2">₦25,000</p>
+            <button class="mt-4 w-full bg-accent text-white py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Perfume -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition">
+          <img src="assets/images/bodycare/perfume.jpeg" alt="Perfume" class="h-40 w-full object-cover cursor-pointer product-img">
+          <div class="p-4 flex flex-col flex-grow">
+            <h3 class="text-md font-bold text-gray-800">Perfume</h3>
+            <p class="text-lg font-semibold text-primary mt-2">₦49,000</p>
+            <button class="mt-4 w-full bg-accent text-white py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Scrub -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition">
+          <img src="assets/images/bodycare/scrub.jpeg" alt="Scrub" class="h-40 w-full object-cover cursor-pointer product-img">
+          <div class="p-4 flex flex-col flex-grow">
+            <h3 class="text-md font-bold text-gray-800">Scrub</h3>
+            <p class="text-lg font-semibold text-primary mt-2">₦18,000</p>
+            <button class="mt-4 w-full bg-accent text-white py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 🔹 FOOTER -->
+<footer class="bg-[#1E3A8A] text-white py-8 mt-12">
+  <div class="max-w-7xl mx-auto text-center">
+    <p>&copy; 2025 Innovate Mart. All rights reserved.</p>
+    <div class="mt-4 flex justify-center space-x-4">
+      <!-- Facebook -->
+      <a href="#" 
+         class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[#1E3A8A] hover:bg-[#F97316] hover:text-white transition"
+         aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <!-- Instagram -->
+      <a href="#" 
+         class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[#1E3A8A] hover:bg-[#F97316] hover:text-white transition"
+         aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <!-- Twitter -->
+      <a href="#" 
+         class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[#1E3A8A] hover:bg-[#F97316] hover:text-white transition"
+         aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <!-- Image Popup Modal -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center z-50">
+    <span id="closeModal" class="absolute top-5 right-8 text-white text-3xl cursor-pointer">&times;</span>
+    <img id="modalImg" src="" alt="Expanded View" class="max-h-[80%] max-w-[90%] rounded shadow-lg">
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Image Modal
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeModal = document.getElementById("closeModal");
+    const productImgs = document.querySelectorAll(".product-img");
+
+    productImgs.forEach(img => {
+      img.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+        modalImg.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.classList.add("hidden");
+    });
+  </script>
+</body>
+</html>
