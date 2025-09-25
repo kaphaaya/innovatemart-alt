@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: InnovateMart Core Infrastructure - S3 Bucket for Static Website
+
+Parameters:
+  S3BucketName:
+    Type: String
+    Description: Name of the S3 bucket for the static website
+
+Resources:
+  WebsiteBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref S3BucketName
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+
+Outputs:
+  WebsiteBucketName:
+    Description: Name of the S3 bucket
+    Value: !Ref WebsiteBucket
+  WebsiteURL:
+    Description: URL of the static website
+    Value: !GetAtt WebsiteBucket.WebsiteURL
+

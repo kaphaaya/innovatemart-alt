@@ -1,0 +1,49 @@
+# mysql-deployment.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-secret
+  namespace: retail-store
+type: Opaque
+data:
+  MYSQL_ROOT_PASSWORD: bXlzcWxwYXNz # base64 of 'mysqlpass'
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: retail-store
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:8
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secret
+              key: MYSQL_ROOT_PASSWORD
+        ports:
+        - containerPort: 3306
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  namespace: retail-store
+spec:
+  selector:
+    app: mysql
+  ports:
+    - port: 3306
+  type: ClusterIP
+

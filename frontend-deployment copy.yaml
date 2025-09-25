@@ -1,0 +1,6 @@
+containers:
+  - name: frontend
+    image: nginx:latest
+    ports:
+      - containerPort: 80
+

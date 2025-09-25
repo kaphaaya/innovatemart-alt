@@ -1,0 +1,22 @@
+env:
+  - name: DB_HOST
+    valueFrom:
+      secretKeyRef:
+        name: postgres-secret
+        key: host
+  - name: DB_USER
+    valueFrom:
+      secretKeyRef:
+        name: postgres-secret
+        key: username
+  - name: DB_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: postgres-secret
+        key: password
+  - name: DB_PORT
+    valueFrom:
+      secretKeyRef:
+        name: postgres-secret
+        key: port
+
